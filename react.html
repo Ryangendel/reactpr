@@ -13,22 +13,39 @@
 </head>
 
 <body>
-    <div id='root'></div>
 
+    <div id='root'></div>
 
     <script type='text/babel'>
 
-        const RootComponent = () => {
+        const Bulldog =(props)=>{
+            console.log("------")
+            console.log(props)
+            console.log("------")
+            return (
+                <h1>My Dogs Name is {props.name}</h1>
+            )
+        }
+
+        const App = () => {
             return(
                 <div>
-                    <h1>hellllooooo</h1>
+                    <Bulldog name="Runa" age="4" weight="120lbs" breed="bulldog"/>
+                    <Bulldog name="skadi"/>
+                    <Bulldog name="hunter"/>
+                    <Bulldog name="Dog1"/>
+                    <Bulldog name="Dog2"/>
+                    <Bulldog name="Dog3"/>
+                    <Bulldog name="Dog4"/>
+                    <Bulldog name="Dog5"/>
                 </div>
             )
         }
 
-        ReactDOM.render(<RootComponen />, document.querySelector('#root'));
+        ReactDOM.render(<App />, document.querySelector('#root'));
 
     </script>
+
 </body>
 
 </html>
